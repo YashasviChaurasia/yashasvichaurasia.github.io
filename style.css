@@ -1,0 +1,277 @@
+:root {
+  --bg: #fdfcf9;
+  --text: #222;
+  --muted: #6a6a6a;
+  --accent: #4a4a4a;
+}
+
+/* ----------- Base ----------- */
+html {
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 19px; /* slightly larger for readability */
+  line-height: 1.9; /* slightly airier for flow */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  max-width: 760px; /* a touch wider to match larger text */
+  margin: 90px auto;
+  padding: 0 2rem;
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* ----------- Headings ----------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "EB Garamond", serif;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--text);
+  margin-top: 2.2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.01em;
+}
+
+h1 { font-size: 2.6em; margin-top: 0; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1.2em; font-weight: 600; }
+h5, h6 { font-size: 1.05em; color: var(--muted); }
+
+.subtitle {
+  color: var(--muted);
+  font-family: "Inter", system-ui, sans-serif;
+  font-style: italic;
+  margin-top: 0.3rem;
+  margin-bottom: 2.6rem;
+  font-size: 1.05em;
+  letter-spacing: 0.015em;
+}
+
+/* ----------- Paragraphs ----------- */
+p {
+  margin-bottom: 1.9rem;
+  font-family: "EB Garamond", serif;
+  font-size: 1.12em; /* main text slightly bigger */
+  line-height: 1.95;
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+
+/* ----------- Links ----------- */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+}
+
+a:hover {
+  color: black;
+  border-bottom: 1px dotted black;
+}
+
+/* ----------- Navigation ----------- */
+nav {
+  margin-top: 3.5rem;
+  font-size: 1rem;
+  font-family: "Inter", system-ui, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+/* ----------- Footer ----------- */
+footer {
+  margin-top: 4rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* ----------- Blog List ----------- */
+ul.post-list a {
+  font-family: "EB Garamond", serif;
+  font-size: 1.1em;
+  text-decoration: none;
+  color: var(--text);
+  border-bottom: 1px dotted transparent;
+  transition: border 0.2s ease;
+}
+
+ul.post-list a:hover {
+  border-bottom: 1px dotted var(--text);
+}
+
+ul.post-list span {
+  color: var(--muted);
+  font-size: 0.9em;
+  margin-left: 0.4em;
+}
+
+/* ----------- Code Blocks ----------- */
+pre, code {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  background: #f7f7f7;
+  color: #333;
+  border-radius: 6px;
+}
+
+pre {
+  padding: 1rem;
+  overflow-x: auto;
+  line-height: 1.6;
+  font-size: 0.95em;
+  margin: 1.8rem 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+p code, li code {
+  background: #f2f2f2;
+  color: #444;
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+}
+
+/* ----------- Tables ----------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2.2rem 0;
+  font-size: 0.98em;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.75rem 0.8rem;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  font-weight: 600;
+  color: #222;
+}
+
+tr:hover {
+  background: #fafafa;
+}
+
+/* ----------- Blockquotes ----------- */
+blockquote {
+  border-left: 3px solid #ddd;
+  margin: 1.8rem 0;
+  padding: 0.6rem 1.2rem;
+  color: #555;
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  background: #fafafa;
+  line-height: 1.7;
+}
+
+/* ----------- Animation ----------- */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+/* ----------- Links (Global) ----------- */
+a {
+  color: #1e5b8a; /* calm blue-gray tone */
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+a:hover {
+  color: #0f3d5c;
+  border-bottom: 1px solid currentColor;
+}
+
+/* Inline links inside paragraphs */
+p a {
+  font-weight: 500;
+}
+
+/* Links inside blockquotes (slightly muted tone) */
+blockquote a {
+  color: #2f6e94;
+  border-bottom: 1px dashed rgba(47,110,148,0.4);
+}
+
+/* Navigation links (simple + clean) */
+nav a {
+  color: var(--accent);
+  border-bottom: none;
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+}
+
+nav a:hover {
+  color: black;
+  border-bottom: none;
+}
+
+/* Footer links (muted but visible) */
+footer a {
+  color: var(--muted);
+  border-bottom: 1px dotted rgba(0,0,0,0.2);
+}
+footer a:hover {
+  color: #000;
+  border-bottom-color: #000;
+}
+
+/* ----------- Footnote Styling ----------- */
+/* Works when you enable the `footnotes` extension in markdown */
+sup.footnote-ref a {
+  color: #1e5b8a;
+  font-size: 0.85em;
+  vertical-align: super;
+  border: none;
+  text-decoration: none;
+}
+
+sup.footnote-ref a:hover {
+  color: #0f3d5c;
+  text-decoration: underline;
+}
+
+/* Footnote list at bottom of posts */
+div.footnotes {
+  font-size: 0.9em;
+  color: var(--muted);
+  border-top: 1px solid #ddd;
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+}
+
+div.footnotes ol {
+  padding-left: 1.5rem;
+}
+
+div.footnotes a {
+  color: #1e5b8a;
+  border-bottom: none;
+}
+
+/* ----------- Shloka Overlay (Fixed Engraved Style) ----------- */
+.shloka-overlay {
+  opacity: 0.26;               /* softer presence */
+  color: #3a3a3a;
+  position: fixed;
+  bottom: 3vh;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-size: 0.9em;            /* smaller, quieter */
+  line-height: 1.7;
+  pointer-events: none;
+  text-shadow:
+    0 1px 1px rgba(255, 255, 255, 0.4),
+    0 -1px 1px rgba(0, 0, 0, 0.05);
+  letter-spacing: 0.02em;
+  width: 90%;
+  max-width: 720px;
+  margin: 0 auto;
+  z-index: 1;
+}
