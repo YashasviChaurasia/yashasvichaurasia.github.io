@@ -69,11 +69,8 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: |
-            index.html
-            blog.html
-            posts/
-            style.css
-            assets/
+            .
+        continue-on-error: false
 
       - name: Deploy to GitHub Pages
         id: deployment
