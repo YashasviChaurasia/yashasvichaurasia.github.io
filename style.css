@@ -275,3 +275,49 @@ div.footnotes a {
   margin: 0 auto;
   z-index: 1;
 }
+
+/* ----------- Blog Index (Indented List Style) ----------- */
+ul.post-list {
+  list-style: disc;
+  padding-left: 2.6rem; /* slightly more indentation for clean margin */
+  margin-top: 2.2rem;
+  opacity: 0.97;
+}
+
+ul.post-list li {
+  margin-bottom: 1.3rem;
+  font-family: "EB Garamond", serif;
+  font-size: 1.05em;
+  color: var(--text);
+  line-height: 1.7;
+  padding-left: 0.3rem; /* adds small space between bullet and text */
+  text-indent: 0; /* no negative offset — keeps text aligned cleanly */
+}
+
+ul.post-list a {
+  text-decoration: none;
+  color: var(--text);
+  border-bottom: 1px dotted transparent;
+  transition: border 0.2s ease;
+}
+
+ul.post-list a:hover {
+  border-bottom: 1px dotted var(--text);
+}
+
+/* ----------- Back Home Link (Serif, Harmonized) ----------- */
+.back-home {
+  display: inline-block;
+  margin-top: 3rem;
+  font-family: "EB Garamond", serif;
+  font-size: 1.05em;
+  color: #1e5b8a;
+  text-decoration: none;
+  border-bottom: 1px dotted transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.back-home:hover {
+  color: #0f3d5c;
+  border-bottom: 1px solid currentColor;
+}
