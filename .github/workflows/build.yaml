@@ -34,11 +34,20 @@ jobs:
       - name: Run Markdown → HTML generator
         run: python generate.py
 
+      - name: Verify blog.html exists
+        run: |
+          if [ ! -f "blog.html" ]; then
+            echo "❌ blog.html not found. Generation failed!"
+            exit 1
+          else
+            echo "✅ blog.html found — proceeding with deployment."
+          fi
+
       - name: Commit generated HTML
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add posts/
+          git add posts/ blog.html || true
           git diff --quiet && git diff --staged --quiet || git commit -m "Auto-generate HTML from markdown"
           git push
 
