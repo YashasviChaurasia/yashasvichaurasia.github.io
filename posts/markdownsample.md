@@ -1,4 +1,4 @@
-# Markdown Style Showcase  
+# Markdown Style Showcase
 *October 2025 · notes*
 
 Welcome to a quick visual test of how Markdown renders on this site.  
